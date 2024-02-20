@@ -1,8 +1,16 @@
 <template>
   <div>
     <!-- Card with Apparel Information -->
-    <div class="card" style="width: 100%">
-      <div class="card-body">
+
+    <div class="button-container" justify="end">
+      <v-btn color="primary" @click="saveToStore">Save</v-btn>
+      <v-btn color="primary" @click="retrieveBillOfMaterial" class="left-space">Retrieve</v-btn>
+
+    </div>
+
+    <v-card class="card">
+
+      <v-card-text>
         <div class="grid-container">
           <div class="grid-item">
             <h5 class="card-title">Apparel Name</h5>
@@ -10,27 +18,19 @@
           </div>
           <div class="grid-item">
             <h5 class="card-title">Number</h5>
-           <h6 class="card-subtitle mb-2 text-muted" v-if="!isEditing" @dblclick="isEditing = true">{{ selectedNumber }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted" v-if="!isEditing" @dblclick="isEditing = true">{{ selectedNumber }}</h6>
             <input v-else v-model="selectedNumber" type="number" @blur="isEditing = false" />
           </div>
           <div class="grid-item">
             <h5 class="card-title">Legacy Number</h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-              {{ apparelLegacyNumber }}
-            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ apparelLegacyNumber }}</h6>
           </div>
         </div>
-      </div>
-    </div>
+      </v-card-text>
+    </v-card>
 
     <!-- Apparel Data Grid -->
     <div class="outer">
-      <!-- Save Button -->
-      <div class="button-container">
-    <div class="save-button" @click="saveToStore">Save</div>
-    <div class="save-button" @click="retrieveBillOfMaterial">Retrieve</div>
-  </div>
-
       <!-- Drop Zone for Excel File -->
       <div
         style="height: 100%"
@@ -52,6 +52,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import { AgGridVue } from "ag-grid-vue";
@@ -83,9 +84,9 @@ export default {
   },
   
   mounted() {
-  // Initialize Vue Toastification
-  this.$toast = useToast();
-},
+    // Initialize Vue Toastification
+    this.$toast = useToast();
+  },
 
   methods: {
     ...mapActions(["addNewCarModel", "saveBillOfMaterialsApparel","fetchApparels","retrieveBillOfMaterialsApparel"]),
@@ -201,16 +202,16 @@ export default {
         });
     },
     showToast(message, type = "success") {
-  this.$toast[type](message, {
-    position: 'bottom-right',
-    timeout: 3000, // 3 seconds
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    draggablePercent: 0.6,
-    showCloseButtonOnHover: true,
-  });
-}
+      this.$toast[type](message, {
+        position: 'bottom-right',
+        timeout: 3000, // 3 seconds
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: true,
+      });
+    }
   },
 };
 </script>
@@ -230,10 +231,29 @@ export default {
 .save-button:hover {
   background-color: #0056b3;
 }
+
 .button-container {
-  position: absolute;
-  top: 10px;
-  right: 100px; /* Adjust this value as needed */
   display: flex;
+  justify-content: flex-end;
+  margin-top: 5px; /* Add margin to create space between the buttons */
+}
+
+.outer {
+  position: relative;
+}
+
+.inner-col {
+  height: calc(100% - 60px); /* Adjust height based on button-container margin and button height */
+}
+
+.ag-theme-alpine {
+  width: 100%;
+  height: 100%;
+}
+.button-container v-btn:not(:last-child) {
+  margin-right: 20px;
+}
+.left-space {
+  margin-left: 10px;
 }
 </style>
