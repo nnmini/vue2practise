@@ -13,11 +13,11 @@
       <v-card-text>
         <div class="grid-container">
           <div class="grid-item">
-            <h5 class="card-title">Apparel Name</h5>
+            <h5 class="card-title">Style</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ apparelName }}</h6>
           </div>
           <div class="grid-item">
-            <h5 class="card-title">Number</h5>
+            <h5 class="card-title">Style #</h5>
             <h6 class="card-subtitle mb-2 text-muted" v-if="!isEditing" @dblclick="isEditing = true">{{ selectedNumber }}</h6>
             <input v-else v-model="selectedNumber" type="number" @blur="isEditing = false" />
           </div>
@@ -185,7 +185,7 @@ export default {
         .dispatch("saveBillOfMaterialsApparel", {
           name: this.apparelName,
           components: this.rowData,
-          apparelId: this.apparelNumber,
+          apparelId: parseInt(this.selectedNumber),
           legacyNumber: this.apparelLegacyNumber,
         })
         .then((response) => {

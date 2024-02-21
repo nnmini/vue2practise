@@ -1,0 +1,121 @@
+[
+  {
+    "apparelId": 1,
+    "name": "T-Shirt",
+    "colors": [
+      "Blue",
+      "Green",
+      "Yellow"
+    ],
+    "components": [
+      {
+        "material": "Cotton Fabric",
+        "quantity": 2,
+        "unitPrice": 5,
+        "color_Blue": "Light Blue"
+      },
+      {
+        "material": "Thread",
+        "quantity": 1,
+        "unitPrice": 2,
+        "color_Green": "Light Green"
+      },
+      {
+        "material": "Tag Label",
+        "quantity": 1,
+        "unitPrice": 0.5
+      },
+      {
+        "material": "Labor",
+        "quantity": 1,
+        "unitPrice": 10,
+        "color_Yellow": "Light yellow"
+      }
+    ],
+    "number": 1
+  },
+  {
+    "apparelId": 2,
+    "name": "Jeans",
+    "colors": [
+      "Black",
+      "Blue",
+      "Gray"
+    ],
+    "components": [
+      {
+        "material": "Denim Fabric",
+        "quantity": 3,
+        "unitPrice": 8,
+        "color_Black": "Jet Black",
+        "color_Blue": "Dark Blue",
+        "color_Gray": "Charcoal Gray"
+      },
+      {
+        "material": "Thread",
+        "quantity": 2,
+        "unitPrice": 1.5,
+        "color_Black": "Midnight Black",
+        "color_Blue": "Royal Blue",
+        "color_Gray": "Slate Gray"
+      },
+      {
+        "material": "Button",
+        "quantity": 4,
+        "unitPrice": 0.75
+      },
+      {
+        "material": "Zipper",
+        "quantity": 1,
+        "unitPrice": 2
+      },
+      {
+        "material": "Labor",
+        "quantity": 1,
+        "unitPrice": 15
+      }
+    ]
+  },
+  {
+    "apparelId": 3,
+    "name": "Hoodie",
+    "colors": [
+      "Red",
+      "Navy",
+      "Gray"
+    ],
+    "components": [
+      {
+        "material": "Fleece Fabric",
+        "quantity": 2,
+        "unitPrice": 7,
+        "color_Red": "Crimson Red",
+        "color_Navy": "Deep Navy",
+        "color_Gray": "Heather Gray"
+      },
+      {
+        "material": "Thread",
+        "quantity": 1,
+        "unitPrice": 1.5,
+        "color_Red": "Burgundy",
+        "color_Navy": "Indigo",
+        "color_Gray": "Slate Gray"
+      },
+      {
+        "material": "Zipper",
+        "quantity": 1,
+        "unitPrice": 2.5
+      },
+      {
+        "material": "Label",
+        "quantity": 1,
+        "unitPrice": 0.5
+      },
+      {
+        "material": "Labor",
+        "quantity": 1,
+        "unitPrice": 12
+      }
+    ]
+  }
+]

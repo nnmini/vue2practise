@@ -67,6 +67,7 @@ const actions = {
   },
   async saveBillOfMaterialsApparel( {commit}, billOfMaterial) {
     try {
+      console.log("saveBillOfMaterialsApparel billOfMaterial.....",billOfMaterial)
       const response = await axios.post(`http://localhost:3000/billofmaterials/apparel/${billOfMaterial.number}`, billOfMaterial);
       console.log('Response:', response.data);
       console.log("commit...",commit)

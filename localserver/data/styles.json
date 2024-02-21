@@ -1,0 +1,23 @@
+[
+  { 
+    "id": 1, 
+    "name": "T-Shirt", 
+    "description": "A basic cotton T-shirt.",
+    "price": 15,
+    "colors": ["Blue", "Green", "Yellow"]
+  },
+  { 
+    "id": 2, 
+    "name": "Jeans", 
+    "description": "A pair of denim jeans.",
+    "price": 40,
+    "colors": ["Black", "White", "Red"]
+  },
+  { 
+    "id": 3, 
+    "name": "Hoodie", 
+    "description": "A warm hoodie made of fleece material.",
+    "price": 30,
+    "colors": ["Gray", "Navy", "Purple"]
+  }
+]
