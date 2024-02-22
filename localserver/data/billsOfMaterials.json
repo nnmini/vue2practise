@@ -4,6 +4,9 @@
     "name": "T-Shirt",
     "colors": [
       "Blue",
+      "red",
+      "pink",
+      "light green",
       "Green",
       "Yellow"
     ],
@@ -12,7 +15,11 @@
         "material": "Cotton Fabric",
         "quantity": 2,
         "unitPrice": 5,
-        "color_Blue": "Light Blue"
+        "color_Blue": "Light Blue",
+        "red": "Pink Red",
+        "color_red": "Pink Red",
+        "color_pink": "Light Pink",
+        "color_light green": "Custom Color"
       },
       {
         "material": "Thread",

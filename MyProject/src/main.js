@@ -1,3 +1,4 @@
+import 'ag-grid-enterprise'
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';

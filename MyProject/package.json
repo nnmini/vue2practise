@@ -13,6 +13,7 @@
     "@ag-grid-community/styles": "^31.0.3",
     "@ag-grid-community/vue": "^31.0.3",
     "ag-grid-community": "^31.0.3",
+    "ag-grid-enterprise": "^31.1.0",
     "ag-grid-vue": "^31.0.3",
     "assert": "^2.1.0",
     "axios": "^1.6.7",
@@ -38,6 +39,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
