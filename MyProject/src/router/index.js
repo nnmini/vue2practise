@@ -1,11 +1,7 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
-
-import ApparelDetailsPage from '../views/ApparelDetailsPage.vue'; // Import the ApparelDetailsPage component
-import AddNewApparelPage from '../views/AddNewApparelPage.vue'; // Import the AddNewApparelPage component
-
-Vue.use(VueRouter);
+import ApparelDetailsPage from '../views/ApparelDetailsPage.vue';
+import AddNewApparelPage from '../views/AddNewApparelPage.vue';
 
 const routes = [
   {
@@ -13,24 +9,21 @@ const routes = [
     name: 'HomePage',
     component: HomePage
   },
-
-
   {
-    path: '/apparel/:id', // Route for apparel details
+    path: '/apparel/:id',
     name: 'ApparelDetails',
     component: ApparelDetailsPage,
     props: true
   },
   {
-    path: '/add-new-apparel', // Route for adding a new apparel
+    path: '/add-new-apparel',
     name: 'AddNewApparel',
     component: AddNewApparelPage
   }
 ];
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHistory(),
   routes
 });
 

@@ -19,11 +19,22 @@ app.get('/apparels', (req, res) => {
 res.json(apparels);
 });
 
+app.get('/apparels/:id', (req, res) => {
+  const apparelId = parseInt(req.params.id);
+  const apparel = apparels.find(apparel => apparel.id === apparelId);
+
+  if (apparel) {
+    res.json(apparel);
+  } else {
+    res.status(404).json({ message: 'Styles not found for the provided apparel ID.' });
+  }
+});
+
 // Define a route to return the Bill of Materials (BoM) for a specific apparel
 app.get('/billofmaterials/apparel/:apparelId', (req, res) => {
  
   const apparelId = parseInt(req.params.apparelId);
-  console.log("billsOfMaterialsApparel....",billsOfMaterialsApparel)
+  console.log("billsOfMaterialsApparel....",apparelId)
   const billOfMaterialApparel = billsOfMaterialsApparel.find(bom => bom.apparelId === apparelId);
 
   if (billOfMaterialApparel) {

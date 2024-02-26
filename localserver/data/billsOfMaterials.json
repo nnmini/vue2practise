@@ -7,6 +7,7 @@
       "red",
       "pink",
       "light green",
+      "001",
       "Green",
       "Yellow"
     ],
@@ -19,7 +20,8 @@
         "red": "Pink Red",
         "color_red": "Pink Red",
         "color_pink": "Light Pink",
-        "color_light green": "Custom Color"
+        "color_light green": "Custom Color",
+        "color_001": "Blue"
       },
       {
         "material": "Thread",

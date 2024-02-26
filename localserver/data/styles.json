@@ -1,23 +1,71 @@
 [
-  { 
-    "id": 1, 
-    "name": "T-Shirt", 
+  {
+    "id": 1,
+    "name": "T-Shirt",
     "description": "A basic cotton T-shirt.",
     "price": 15,
-    "colors": ["Blue", "Green", "Yellow"]
+    "colors": ["Blue", "Green", "Yellow"],
+    "Colorways": [
+      {
+        "colorwayName": "Black/White",
+        "colorwayCode": "001",
+        "PrimaryColor": "Blue",
+        "SecondaryColor": "Green",
+        "TertiaryColor": "Yellow"
+      },
+      {
+        "colorwayName": "Red/White",
+        "colorwayCode": "002",
+        "PrimaryColor": "Red",
+        "SecondaryColor": "White",
+        "TertiaryColor": "Blue"
+      }
+    ]
   },
-  { 
-    "id": 2, 
-    "name": "Jeans", 
+  {
+    "id": 2,
+    "name": "Jeans",
     "description": "A pair of denim jeans.",
     "price": 40,
-    "colors": ["Black", "White", "Red"]
+    "colors": ["Black", "White", "Red"],
+    "Colorways": [
+      {
+        "colorwayName": "Black/White",
+        "colorwayCode": "003",
+        "PrimaryColor": "Black",
+        "SecondaryColor": "White",
+        "TertiaryColor": "Red"
+      },
+      {
+        "colorwayName": "Red/Black",
+        "colorwayCode": "004",
+        "PrimaryColor": "Red",
+        "SecondaryColor": "Black",
+        "TertiaryColor": "White"
+      }
+    ]
   },
-  { 
-    "id": 3, 
-    "name": "Hoodie", 
+  {
+    "id": 3,
+    "name": "Hoodie",
     "description": "A warm hoodie made of fleece material.",
     "price": 30,
-    "colors": ["Gray", "Navy", "Purple"]
+    "colors": ["Gray", "Navy", "Purple"],
+    "Colorways": [
+      {
+        "colorwayName": "Gray/Navy",
+        "colorwayCode": "005",
+        "PrimaryColor": "Gray",
+        "SecondaryColor": "Navy",
+        "TertiaryColor": "Purple"
+      },
+      {
+        "colorwayName": "Purple/Gray",
+        "colorwayCode": "006",
+        "PrimaryColor": "Purple",
+        "SecondaryColor": "Gray",
+        "TertiaryColor": "Navy"
+      }
+    ]
   }
 ]

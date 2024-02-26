@@ -18,9 +18,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import { AgGridVue } from 'ag-grid-vue';
-import 'ag-grid-community/styles/ag-grid.css';
-import 'ag-grid-community/styles/ag-theme-alpine.css';
+import { AgGridVue } from 'ag-grid-vue3';
+import 'ag-grid-community/dist/styles/ag-grid.css';
+import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
 export default {
   components: {

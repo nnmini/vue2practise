@@ -55,9 +55,9 @@
 
 
 <script>
-import { AgGridVue } from "ag-grid-vue";
+import { AgGridVue } from "ag-grid-vue3";
 import * as XLSX from "xlsx";
-import { useToast } from 'vue-toastification';
+
 import { mapActions } from "vuex";
 
 export default {
@@ -84,8 +84,7 @@ export default {
   },
   
   mounted() {
-    // Initialize Vue Toastification
-    this.$toast = useToast();
+
   },
 
   methods: {
@@ -112,11 +111,11 @@ export default {
           // Handle the retrieved Bill of Material
           this.rowData =response.components;
           this.apparelName =response.name;
-          this.showToast("Retrieved successfully"); // Show success toast
+       
         })
         .catch((error) => {
           console.error("Error retrieving Bill of Material:", error);
-          this.showToast("Error retrieving data", "error"); // Show error toast
+        
           // Handle errors if any
         });
     },
@@ -193,25 +192,15 @@ export default {
           // Optionally, you can handle the response or perform other actions
           // For example, you might want to fetch updated data after saving
           this.fetchApparels(); // Assuming you have a fetchApparels method in your component
-          this.showToast("Saved successfully"); // Show success toast
+      
         })
         .catch((error) => {
           console.error("Error:", error);
-          this.showToast("Error saving data", "error"); // Show error toast
+       
           // Handle errors if any
         });
     },
-    showToast(message, type = "success") {
-      this.$toast[type](message, {
-        position: 'bottom-right',
-        timeout: 3000, // 3 seconds
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        draggablePercent: 0.6,
-        showCloseButtonOnHover: true,
-      });
-    }
+
   },
 };
 </script>
